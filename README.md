@@ -1,84 +1,93 @@
-The Story Behind Dasara -- An Interactive Navaratri & Festival Website
-An educational mini project that introduces visitors to traditional
-stories associated with Dasara and the nine forms of Goddess Durga in
-one widely followed Navadurga tradition.
-About the Project
-The Story Behind Dasara is a responsive, interactive website
-designed to help visitors explore festival stories, reflect on their
-lessons, and test their understanding through a short quiz. Visitors can
-enter their name to receive a personalized welcome.
+# The Story Behind Dasara – An Interactive Navaratri & Festival Website
 
-Stories and customs vary by region and community. This project presents
-selected traditional accounts rather than claiming that one version is
-universal.
-Features
-- Personalized welcome: Enter a name to begin the experience.
-- Four Dasara story chapters: Explore selected traditions
-  associated with Durga and Mahishasura, Rama and Ravana, and the
-  meaning of Dasara.
-- Nine Days of Navaratri: Explore nine forms of Goddess Durga,
-  with a theme and reflection for each day.
-- Interactive navigation: Move between chapters and Navaratri
-  days.
-- Reveal-the-lesson interaction: Reveal a lesson after reading
-  each story chapter.
-- Five-question quiz: Answer questions and view your score.
-- Original SVG artwork: Illustrations are created with SVG and
-  styled with CSS.
-- Festival-inspired design: Maroon and gold colours, decorative
-  details, and subtle animations.
-- Accessibility considerations: Semantic HTML, labels, live
-  feedback, keyboard focus styles, and reduced-motion support.
-- Sources and further reading: Links to background resources about
-  the traditions.
-Technologies Used
-- HTML5 --- page structure and content
-- CSS3 --- layout, responsive styling, colours, and animations
-- JavaScript --- navigation, personalization, Navaratri content,
-  and quiz logic
-- SVG --- original vector illustrations
-No framework or build step is required.
-Project Structure
+## About the Project
+
+**The Story Behind Dasara** is an educational mini project that explores traditional stories associated with Dasara and the nine forms of Goddess Durga in one widely followed Navadurga tradition.
+
+The website allows visitors to enter their name, explore festival stories, discover the meaning of each Navaratri day, and test their knowledge through an interactive quiz.
+
+Stories and customs vary by region and community. This project presents selected traditional accounts rather than claiming that one version is universal.
+
+## Features
+
+- **Personalized Welcome:** Enter your name to begin your journey.
+- **Dasara Stories:** Explore four chapters about traditional stories associated with Dasara.
+- **Nine Days of Navaratri:** Discover nine forms of Goddess Durga, their themes, and daily reflections.
+- **Interactive Navigation:** Move between story chapters and Navaratri days.
+- **Reveal the Lesson:** Discover the lesson associated with each story.
+- **Knowledge Quiz:** Answer five questions and view your final score.
+- **Original SVG Artwork:** Custom vector illustrations styled with CSS.
+- **Festival-Inspired Design:** Maroon and gold colours, decorative elements, and animations.
+- **Responsive Layout:** Designed to adapt to different screen sizes.
+- **Sources and Further Reading:** Explore additional resources about the traditions.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- SVG (Scalable Vector Graphics)
+
+## Project Structure
+
+```text
 dasara-website/
 ├── index.html
 ├── style.css
 ├── script.js
-├── logo.png        # Include if used by your version of the project
+├── logo.png
 └── README.md
-Keep index.html, style.css, and script.js in the same folder. If
-your HTML references logo.png, keep that image in the same folder too.
-Run Locally
+```
+
+*Include `logo.png` only if your version of the website uses that image.*
+
+## How to Run the Project
+
 1. Download or clone this repository.
-2. Open the project folder.
-3. Open index.html in a browser.
-For local development, you can also open the folder in Visual Studio
-Code and use the Live Server extension.
-Deploy with GitHub Pages
-1. Push the project files to a GitHub repository.
-2. Open the repository's Settings.
-3. Select Pages.
-4. Under Build and deployment, choose Deploy from a branch.
-5. Select the main branch and the /(root) folder, then save.
-6. Wait for deployment to finish. GitHub will show the published
-   website URL in the Pages settings.
-Sources and Cultural Note
-The website links to resources for further reading, including:
-- Encyclopaedia Britannica --- Devi
-  Mahatmya
-- Encyclopaedia Britannica ---
-  Ramayana
-- UNESCO --- Ramlila, the traditional performance of the
-  Ramayana
-- Official Mysuru Dasara website
-- Incredible India ---
-  Navratri
-Stories, rituals, colours, and celebrations can differ by region and
-community. The Navaratri section describes one widely followed Navadurga
-tradition.
-Future Improvements
-- Add more regional stories and traditions with reliable references.
-- Improve and expand the illustrations for each day.
-- Add optional translations into Indian languages.
-- Test the full experience across browsers and mobile screen sizes.
-Author
-Revanth Raghu Nandan
+2. Open the project folder in Visual Studio Code.
+3. Make sure `index.html`, `style.css`, and `script.js` are in the same folder.
+4. Open `index.html` in your browser.
+
+You can also use the Live Server extension in Visual Studio Code for local development.
+
+## How to Deploy Using GitHub Pages
+
+1. Upload the project files to a GitHub repository.
+2. Open the repository's **Settings**.
+3. Select **Pages** from the sidebar.
+4. Under **Build and deployment**, select **Deploy from a branch**.
+5. Choose the `main` branch and the `/(root)` folder.
+6. Click **Save**.
+7. Wait for GitHub Pages to publish the website.
+
+Your website URL will generally follow this format:
+
+`https://YOUR-USERNAME.github.io/dasara-website/`
+
+Replace `YOUR-USERNAME` with your GitHub username and `dasara-website` with your repository name.
+
+## Sources and Further Reading
+
+- [Encyclopaedia Britannica – Devi Mahatmya](https://www.britannica.com/topic/Devi-Mahatmya)
+- [Encyclopaedia Britannica – Ramayana](https://www.britannica.com/topic/Ramayana-Indian-epic)
+- [UNESCO – Ramlila, the Traditional Performance of the Ramayana](https://ich.unesco.org/en/RL/ramlila-the-traditional-performance-of-the-ramayana-00110?RL=00110)
+- [Official Mysuru Dasara Website](https://mysoredasara.gov.in/)
+- [Incredible India – Navratri](https://www.incredibleindia.gov.in/en/festivals-and-events/navratri)
+
+**Cultural Note:** Stories, rituals, colours, and celebrations vary across regions and communities. The Navaratri section presents one widely followed Navadurga tradition.
+
+## Future Improvements
+
+- Add more regional stories and festival traditions.
+- Improve illustrations for each of the nine days.
+- Add translations into Indian languages.
+- Expand the quiz with more questions.
+- Test the website across browsers and mobile devices.
+
+## Author
+
+Created as an individual college mini project.
+
+---
+
+**The Story Behind Dasara** — exploring traditions, stories, and the values they inspire.
