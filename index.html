@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore traditional stories associated with Dasara, discover their lessons, and test your knowledge.">
+  <title>The Story Behind Dasara</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div id="embers" aria-hidden="true"></div>
+
+  <main>
+    <!-- Page 1: Welcome -->
+    <section id="screen-welcome" class="screen" aria-labelledby="welcome-title">
+      <img src="logo.png" alt="The Story Behind Dasara" class="main-logo">
+      <p class="eyebrow">A festival of courage, devotion and renewal</p>
+      <h1 id="welcome-title" tabindex="-1">The Story Behind Dasara</h1>
+      <p class="subtitle">Discover traditional stories of good triumphing over evil.</p>
+      <p class="intro">Travel through four short chapters, reveal the lesson in each, and test what you learned in a five-question quiz.</p>
+      <form id="name-form" class="panel" novalidate>
+        <label for="name-input" class="sr-only">Your name</label>
+        <input id="name-input" type="text" placeholder="Enter your name" maxlength="30" autocomplete="given-name" aria-describedby="name-error" required>
+        <p id="name-error" class="error" role="alert"></p>
+        <button type="submit" class="btn">Begin Your Journey</button>
+      </form>
+    </section>
+
+    <!-- Page 2: Personalised welcome -->
+    <section id="screen-greeting" class="screen" aria-labelledby="greeting-title" hidden>
+      <div class="art" id="art-greeting" aria-hidden="true"></div>
+      <p class="eyebrow">Your journey begins</p>
+      <h2 id="greeting-title" tabindex="-1"></h2>
+      <p class="intro">Explore two well-known traditions associated with Dasara and learn how communities celebrate the season in different ways.</p>
+      <div class="choice-actions">
+        <button type="button" class="btn" id="navaratri-btn">Explore the 9 Days of Navaratri</button>
+        <button type="button" class="btn ghost" id="discover-btn">Discover the Dasara Stories</button>
+      </div>
+    </section>
+
+    <!-- Navaratri: nine forms of the Goddess -->
+    <section id="screen-navaratri" class="screen" aria-labelledby="navaratri-title" hidden>
+      <p class="eyebrow">Nine days · Nine forms · One journey</p>
+      <h2 id="navaratri-title" tabindex="-1">The Nine Days of Navaratri</h2>
+      <p class="intro">Explore the nine forms of Goddess Durga in one widely followed Navadurga tradition. Practices, stories and colours can vary by region and community.</p>
+      <div class="navaratri-progress" aria-live="polite"><span id="navaratri-progress-text">Day 1 of 9</span><div class="progress"><div id="navaratri-progress-bar"></div></div></div>
+      <div id="navaratri-grid" class="navaratri-grid" aria-label="Choose a Navaratri day"></div>
+      <article class="panel navaratri-detail" aria-live="polite">
+        <p id="navaratri-day-label" class="day-label">DAY 1</p>
+        <h3 id="navaratri-goddess-title">Maa Shailaputri</h3>
+        <p id="navaratri-theme" class="day-theme"></p>
+        <p id="navaratri-story"></p>
+        <p class="reflection-label">A thought for the day</p>
+        <p id="navaratri-reflection" class="reflection"></p>
+      </article>
+      <div class="nav">
+        <button type="button" class="btn ghost" id="navaratri-prev">Previous Day</button>
+        <button type="button" class="btn" id="navaratri-next">Next Day</button>
+      </div>
+      <div class="navaratri-footer-actions">
+        <button type="button" class="btn ghost" id="navaratri-back">Back to Welcome</button>
+        <button type="button" class="btn" id="navaratri-stories">Explore the Dasara Stories</button>
+      </div>
+    </section>
+
+    <!-- Story chapters -->
+    <section id="screen-story" class="screen" aria-labelledby="chapter-title" hidden>
+      <div class="progress" role="progressbar" aria-label="Story progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1" id="progress-track"><div id="progress-bar"></div></div>
+      <p id="chapter-count" class="chapter-count" aria-live="polite"></p>
+      <ol id="chapter-dots" class="dots" aria-label="Chapters"></ol>
+      <article id="chapter-card" class="panel chapter">
+        <div class="art small" id="chapter-art" aria-hidden="true"></div>
+        <h2 id="chapter-title" tabindex="-1"></h2>
+        <div id="chapter-text"></div>
+        <button type="button" class="btn ghost" id="lesson-btn" aria-expanded="false" aria-controls="lesson-box">Reveal the lesson</button>
+        <p id="lesson-box" class="lesson" hidden></p>
+      </article>
+      <div class="nav">
+        <button type="button" class="btn ghost" id="prev-btn">Previous</button>
+        <button type="button" class="btn" id="next-btn">Next</button>
+      </div>
+    </section>
+
+    <!-- Page 4: Quiz -->
+    <section id="screen-quiz" class="screen" aria-labelledby="quiz-title" hidden>
+      <p class="eyebrow">A quick knowledge check</p>
+      <h2 id="quiz-title" tabindex="-1">Test Your Knowledge</h2>
+      <div id="quiz-card" class="panel">
+        <p id="quiz-count" class="chapter-count"></p>
+        <p id="quiz-question" class="question"></p>
+        <div id="quiz-options" class="options"></div>
+        <p id="quiz-feedback" class="feedback" aria-live="polite"></p>
+        <button type="button" class="btn" id="quiz-next" hidden>Next question</button>
+      </div>
+      <div id="quiz-result" class="panel" hidden>
+        <p id="score-text" class="score"></p>
+        <p id="score-message"></p>
+        <button type="button" class="btn" id="finish-btn">Continue</button>
+      </div>
+    </section>
+
+    <!-- Page 5: Final greeting -->
+    <section id="screen-final" class="screen" aria-labelledby="final-title" hidden>
+      <div class="art" id="art-final" aria-hidden="true"></div>
+      <p class="eyebrow">May the light of wisdom guide you</p>
+      <h2 id="final-title" tabindex="-1"></h2>
+      <p class="closing">Dasara reminds many people of courage, truth and righteousness. May every lamp you light this Vijayadashami carry a little of that hope into your own life.</p>
+      <button type="button" class="btn" id="restart-btn">Start Again</button>
+    </section>
+
+    <!-- Sources -->
+    <section class="sources panel" aria-labelledby="sources-title">
+      <h2 id="sources-title">Sources and Further Reading</h2>
+      <p>These links provide background on selected traditions. Stories and customs vary by region and community.</p>
+      <ul>
+        <li><a href="https://www.britannica.com/topic/Devi-Mahatmya" target="_blank" rel="noopener noreferrer">Encyclopaedia Britannica: Devi Mahatmya</a></li>
+        <li><a href="https://www.britannica.com/topic/Ramayana-Indian-epic" target="_blank" rel="noopener noreferrer">Encyclopaedia Britannica: Ramayana</a></li>
+        <li><a href="https://ich.unesco.org/en/RL/ramlila-the-traditional-performance-of-the-ramayana-00110?RL=00110" target="_blank" rel="noopener noreferrer">UNESCO: Ramlila, the traditional performance of the Ramayana</a></li>
+        <li><a href="https://mysoredasara.gov.in/" target="_blank" rel="noopener noreferrer">Official Mysuru Dasara website</a></li>
+        <li><a href="https://www.incredibleindia.gov.in/en/festivals-and-events/navratri" target="_blank" rel="noopener noreferrer">Incredible India: Navratri and regional traditions</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Stories follow traditional accounts and vary by region. Original illustrations are created with SVG and CSS.</footer>
+</body>
+</html>
