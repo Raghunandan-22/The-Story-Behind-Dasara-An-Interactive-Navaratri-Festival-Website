@@ -86,7 +86,7 @@ Replace `YOUR-USERNAME` with your GitHub username and `dasara-website` with your
 
 ## Author
 
-Created as an individual college mini project.
+Revanth Raghu Nandan
 
 ---
 
